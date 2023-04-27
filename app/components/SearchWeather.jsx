@@ -26,10 +26,13 @@ export default function FullWidthTextField({ getCityData }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const finalCity = city.trim();
 
-    const weather = await fetchWeather(city);
+    if (!finalCity || /^\s*$/.test(finalCity)) {
+      return;
+    }
 
-    console.log(weather);
+    const weather = await fetchWeather(finalCity);
 
     getCityData(weather);
     setLoading(false);

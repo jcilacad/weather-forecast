@@ -33,6 +33,12 @@ const theme = createTheme();
 export default function Album() {
   const [cityData, setCityData] = useState({});
 
+  const resultData = (result) => {
+    if (result.cod !== "200") return;
+
+    setCityData(result);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -69,7 +75,7 @@ export default function Album() {
               informed and prepared with our user-friendly weather forecasting
               system.
             </Typography>
-            <SearchWeather getCityData={(result) => setCityData(result)} />
+            <SearchWeather getCityData={resultData} />
 
             {!isObjEmpty(cityData) && <CityDetails cityData={cityData} />}
           </Container>

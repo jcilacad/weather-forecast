@@ -58,7 +58,7 @@ export default function MediaControlCard({ weatherData }) {
       </Box>
 
       <Grid md sx={{ my: "auto", mx: "auto" }}>
-        <Image loader={cityIconLoader} height="100" width="110" src={icon} />
+        <Image loader={cityIconLoader} height="90" width="100" src={icon} />
         <Typography component="div" variant="h5">
           {temp} °C
         </Typography>
