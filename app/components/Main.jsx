@@ -64,10 +64,10 @@ export default function Album() {
               marginBottom={"3rem"}
             >
               Access 5-day, 3-hour weather forecast data conveniently through
-              our search bar feature. Simply input your desired location and
-              receive precise, up-to-date predictions to plan your activities.
-              Stay informed and prepared with our user-friendly weather
-              forecasting system.
+              search bar feature. Simply input your desired location and receive
+              precise, up-to-date predictions to plan your activities. Stay
+              informed and prepared with our user-friendly weather forecasting
+              system.
             </Typography>
             <SearchWeather getCityData={(result) => setCityData(result)} />
 
