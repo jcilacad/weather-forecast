@@ -1,26 +1,20 @@
 import Image from "next/image";
 import React from "react";
-
-const myLoader = ({ src }) => {
-  return `https://flagcdn.com/48x36/${src}.png`;
-};
+import CityDetail from "./CityDetail";
+import WeatherContainer from "./WeatherContainer";
 
 const CityDetails = ({ cityData }) => {
-  const { country } = cityData.city;
+  const { country, population } = cityData.city;
+
+  const weatherList = cityData.list;
 
   const regionNamesInEnglish = new Intl.DisplayNames(["en"], {
     type: "region",
   });
   return (
     <div>
-      <Image
-        loader={myLoader}
-        src={country.toLowerCase()}
-        width={30}
-        height={30}
-      />
-
-      {regionNamesInEnglish.of(country)}
+      <CityDetail cityDetail={cityData} />
+      <WeatherContainer weatherList={weatherList} />
     </div>
   );
 };

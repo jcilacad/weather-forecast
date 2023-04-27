@@ -21,3 +21,11 @@
   align-items: center;
   height: 350px;
 }
+
+.weather-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
