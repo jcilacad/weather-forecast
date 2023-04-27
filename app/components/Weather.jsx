@@ -7,7 +7,7 @@ import Image from "next/image";
 import * as React from "react";
 
 const cityIconLoader = ({ src }) => {
-  return `http://openweathermap.org/img/w/${src}.png`;
+  return `https://openweathermap.org/img/w/${src}.png`;
 };
 
 export default function MediaControlCard({ weatherData }) {
