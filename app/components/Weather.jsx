@@ -21,6 +21,12 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 }));
 
 export default function MediaControlCard({ weatherData }) {
+  const {
+    main: { temp, humidity },
+  } = weatherData;
+  const {
+    wind: { speed },
+  } = weatherData;
   const { weather } = weatherData;
   const { dt_txt: time } = weatherData;
   const { icon, description } = weather[0];
@@ -62,9 +68,9 @@ export default function MediaControlCard({ weatherData }) {
         container
         wrap="nowrap"
         spacing={1}
-        sx={{ my: "auto", width: "50%" }}
+        sx={{ my: "auto", width: "50%", mr: 2 }}
       >
-        <Grid item>
+        <Grid item sx={{ my: "auto" }}>
           <Image loader={cityIconLoader} height="100" width="100" src={icon} />
         </Grid>
         <Grid md sx={{ my: "auto" }}>
@@ -72,7 +78,9 @@ export default function MediaControlCard({ weatherData }) {
             noWrap
             sx={{ textAlign: "center", my: "auto", mx: "auto" }}
           >
-            Ilacad
+            <h2>{temp} °C</h2>
+            <p>Humidity: {humidity}%</p>
+            <p>Wind: {speed}km/h</p>
           </Typography>
         </Grid>
       </Grid>
