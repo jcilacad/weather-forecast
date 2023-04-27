@@ -14,7 +14,7 @@ export default function FullWidthTextField({ getCityData }) {
     setLoading(true);
     const weather_api = process.env.NEXT_PUBLIC_WEATHER_KEY;
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${weather_api}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${weather_api}&units=metric`
     );
 
     await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 Second
