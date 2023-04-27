@@ -37,7 +37,7 @@ export default function CityDetail({ cityDetail }) {
           border: 5,
           borderColor: "primary.secondary",
           borderRadius: "50px",
-          borderColor: "#82b1ff",
+          borderColor: "gray",
         }}
       >
         <React.Fragment>
