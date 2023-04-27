@@ -32,7 +32,14 @@ export default function CityDetail({ cityDetail }) {
 
   return (
     <Box sx={{ minWidth: 275, textAlign: "center", my: 5 }}>
-      <Card variant="outlined">
+      <Card
+        sx={{
+          border: 5,
+          borderColor: "primary.secondary",
+          borderRadius: "50px",
+          borderColor: "#82b1ff",
+        }}
+      >
         <React.Fragment>
           <CardContent>
             <Typography variant="h3" component="div">

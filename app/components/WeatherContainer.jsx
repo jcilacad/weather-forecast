@@ -6,17 +6,18 @@ import * as React from "react";
 import Weather from "./Weather";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#1A2027",
+  backgroundColor: "#82b1ff",
   ...theme.typography.body2,
-  padding: theme.spacing(3),
+  padding: theme.spacing(0.3),
   textAlign: "center",
-  color: theme.palette.text.secondary,
+  borderRadius: "30px",
+  color: "theme.palette.text.main",
 }));
 
 export default function WeatherContainer({ weatherList }) {
   return (
     <Box sx={{ width: "100%" }}>
-      <Stack spacing={4}>
+      <Stack spacing={1.5}>
         {weatherList.map((weather) => {
           return (
             <Item>
